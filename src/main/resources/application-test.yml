@@ -1,0 +1,16 @@
+# Integration tests override datasource via @DynamicPropertySource + Testcontainers
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/testdb
+  jpa:
+    hibernate:
+      ddl-auto: validate
+  flyway:
+    enabled: true
+
+app:
+  redis:
+    enabled: false
+  jwt:
+    secret: test-secret-key-for-testing-only-256-bits-long
+    expiration-ms: 3600000
